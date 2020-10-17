@@ -9,6 +9,173 @@
 </head>
 <body>
     <h1 class="main-title">Kanban Board</h1>
+
+    <div class="drag-container">
+        <ul class="drag-list">
+          
+          
+          
+
+
+
+
+
+          
+          
+            <!-- Backlog Column -->
+            <li class="drag-column backlog-column">
+                <span class="header">
+                    <h1>Backlog</h1>
+                </span>
+                <!-- Backlog Content -->
+                <div id="backlog-content" class='custom-scroll'>
+
+                    <!-- This means that we are setting an event listener for ondrop and ondragover. When these two events happen, we run drop() and allowDrop() functions respectively. -->
+                    <ul class="drag-item-list" id="backlog-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(0)">
+                       
+                    </ul>
+                </div>
+
+                <!-- Add button group -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(0)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-button solid" onclick="hideInputBox(0)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+
+                <div class="add-container" contenteditable="true">
+                    <div class="add-item"></div>
+                </div>
+                
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- progress Column -->
+            <li class="drag-column progress-column">
+                <span class="header">
+                    <h1>Progress</h1>
+                </span>
+                <!-- progress Content -->
+                <div id="progress-content" class='custom-scroll'>
+                    <ul class="drag-item-list" id="progress-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(1)">
+                        
+                    </ul>
+                </div>
+
+                <!-- Add button group -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(1)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-button solid" onclick="hideInputBox(1)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+
+                <div class="add-container" contenteditable="true">
+                    <div class="add-item"></div>
+                </div>
+                
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- complete Column -->
+            <li class="drag-column complete-column">
+                <span class="header">
+                    <h1>Complete</h1>
+                </span>
+                <!-- complete Content -->
+                <div id="complete-content" class='custom-scroll'>
+                    <ul class="drag-item-list" id="complete-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(2)">
+                    </ul>
+                </div>
+
+                <!-- Add button group -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(2)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-button solid" onclick="hideInputBox(2)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+
+                <div class="add-container" contenteditable="true">
+                    <div class="add-item"></div>
+                </div>
+                
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- on-hold Column -->
+            <li class="drag-column on-hold-column">
+                <span class="header">
+                    <h1>On-hold</h1>
+                </span>
+                <!-- on-hold Content -->
+                <div id="on-hold-content" class='custom-scroll'>
+                    <ul class="drag-item-list" id="on-hold-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(3)">
+                    </ul>
+                </div>
+
+                <!-- Add button group -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(3)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-button solid" onclick="hideInputBox(3)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+
+                <div class="add-container" contenteditable="true">
+                    <div class="add-item"></div>
+                </div>                
+            </li>
+
+
+
+
+            
+        </ul>
+    </div>
     <!-- Script -->
     <script src="script.js"></script>
 </body>
